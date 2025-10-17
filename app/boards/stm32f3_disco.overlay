@@ -1,0 +1,20 @@
+/*
+ * Copyright (c) 2025 Muhammad Waleed Badar
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+&usart2 {
+	current-speed = <38400>;
+	status = "okay";
+};
+
+/ {
+    nmea_rs485_control {
+        compatible = "gpio-leds";
+        rs485_de: rs485_de {
+            gpios = <&gpioa 1 GPIO_ACTIVE_HIGH>;
+            label = "RS485 DE";
+        };
+    };
+};
